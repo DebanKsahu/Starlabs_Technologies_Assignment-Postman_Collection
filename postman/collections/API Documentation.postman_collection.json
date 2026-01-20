@@ -1,0 +1,651 @@
+{
+  "info": {
+    "_postman_id": "dbfd94a0-2a69-420e-b87b-5bd2df4f65ce",
+    "name": "API Documentation",
+    "description": "This template contains a boilerplate for documentation that you can quickly customize and reuse.\n\n### How to use this template:\n\n- Replace the content given brackets (()) with your API's details.\n- Tips are formatted in `codespan` - feel free to read and remove them.\n    \n\n---\n\n`Start with a brief overview of what your API offers.`\n\nThe ((product name)) provides many API products, tools, and resources that enable you to ((add product value here)).\n\n`You can also list the APIs you offer, link to the relevant pages, or do both in this section.`\n\n## **Getting started guide**\n\n`List the steps or points required to start using your APIs. Make sure to cover everything required to reach success with your API as quickly as possible.`\n\nTo start using the ((add APIs here)), you need to -\n\n`The points given below are from The Postman API's documentation. You can reference it to write your own getting started guide.`\n\n- You must use a valid API Key to send requests to the API endpoints. You can get your API key from Postman's [integrations dashboard](https://go.postman.co/settings/me/api-keys).\n- The API has [rate and usage limits](https://learning.postman.com/docs/developer/postman-api/postman-api-rate-limits/).\n- The API only responds to HTTPS-secured communications. Any requests sent via HTTP return an HTTP 301 redirect to the corresponding HTTPS resources.\n- The API returns request responses in JSON format. When an API request returns an error, it is sent in the JSON response as an error key.\n    \n\n## Authentication\n\n`Add details on the authorization keys/tokens required, steps that cover how to get them, and the relevant error codes.`\n\nThe ((product name)) API uses ((add your API's authorization type)) for authentication.\n\n`The details given below are from the Postman API's documentation. You can reference it to write your own authentication section.`\n\nPostman uses API keys for authentication. You can generate a Postman API key in the [API keys](https://postman.postman.co/settings/me/api-keys) section of your Postman account settings.\n\nYou must include an API key in each request to the Postman API with the X-Api-Key request header.\n\n### Authentication error response\n\nIf an API key is missing, malformed, or invalid, you will receive an HTTP 401 Unauthorized response code.\n\n## Rate and usage limits\n\n`Use this section to cover your APIs' terms of use. Include API limits, constraints, and relevant error codes, so consumers understand the permitted API usage and practices.`\n\n`The example given below is from The Postman API's documentation. Use it as a reference to write your APIs' terms of use.`\n\nAPI access rate limits apply at a per-API key basis in unit time. The limit is 300 requests per minute. Also, depending on your plan, you may have usage limits. If you exceed either limit, your request will return an HTTP 429 Too Many Requests status code.\n\nEach API response returns the following set of headers to help you identify your use status:\n\n| Header | Description |\n| --- | --- |\n| `X-RateLimit-Limit` | The maximum number of requests that the consumer is permitted to make per minute. |\n| `X-RateLimit-Remaining` | The number of requests remaining in the current rate limit window. |\n| `X-RateLimit-Reset` | The time at which the current rate limit window resets in UTC epoch seconds. |\n\n### 503 response\n\nAn HTTP `503` response from our servers indicates there is an unexpected spike in API access traffic. The server is usually operational within the next five minutes. If the outage persists or you receive any other form of an HTTP `5XX` error, [contact support](https://support.postman.com/hc/en-us/requests/new/).\n\n### **Need some help?**\n\n`Add links that customers can refer to whenever they need help.`\n\nIn case you have questions, go through our tutorials ((link to your video or help documentation here)). Or visit our FAQ page ((link to the relevant page)).\n\nOr you can check out our community forum, there’s a good chance our community has an answer for you. Visit our developer forum ((link to developer forum)) to review topics, ask questions, and learn from others.\n\n`You can also document or add links to libraries, code examples, and other resources needed to make a request.`",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "StarLabs",
+      "item": [
+        {
+          "name": "Auth",
+          "item": [
+            {
+              "name": "Signup",
+              "id": "a774e110-2fb5-4ed4-98e1-3e13f9b3e6bf",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"name\": \"Virat Kholi\",\r\n  \"email\": \"king@gmail.com\",\r\n  \"password\": \"king\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://127.0.0.1:8000/signup",
+                  "protocol": "http",
+                  "host": [
+                    "127",
+                    "0",
+                    "0",
+                    "1"
+                  ],
+                  "port": "8000",
+                  "path": [
+                    "signup"
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "0cde3bb1-c7ab-4f69-8d8e-57a52a23e3ef",
+                  "name": "Signup (Successful)",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\r\n  \"name\": \"Deban K\",\r\n  \"email\": \"starLab@gmail.com\",\r\n  \"password\": \"starlab\"\r\n}",
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "http://127.0.0.1:8000/signup",
+                      "protocol": "http",
+                      "host": [
+                        "127",
+                        "0",
+                        "0",
+                        "1"
+                      ],
+                      "port": "8000",
+                      "path": [
+                        "signup"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": null,
+                  "header": [
+                    {
+                      "key": "date",
+                      "value": "Tue, 20 Jan 2026 16:58:52 GMT"
+                    },
+                    {
+                      "key": "server",
+                      "value": "uvicorn"
+                    },
+                    {
+                      "key": "content-length",
+                      "value": "180"
+                    },
+                    {
+                      "key": "content-type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n    \"tokenType\": \"bearer\",\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIwNjk2ZmI0NC1jYzU2LTdhMmItODAwMC02MTJlZjZhNzgwZTQifQ.IuI-qrxSxRq398T_4F_BAeVOIIIt3n5suclvK5gWvrs\"\n}"
+                }
+              ]
+            },
+            {
+              "name": "Login",
+              "id": "70851cf0-a4bd-4957-8946-f7c45cf5cc2a",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "{{Test2JWTToken}}",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"email\": \"starLab@gmail.com\",\r\n  \"password\": \"starlab\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://127.0.0.1:8000/login",
+                  "protocol": "http",
+                  "host": [
+                    "127",
+                    "0",
+                    "0",
+                    "1"
+                  ],
+                  "port": "8000",
+                  "path": [
+                    "login"
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "b6d99e73-d3a3-4105-9d28-005c20af0250",
+                  "name": "Login (Successful)",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\r\n  \"email\": \"starLab@gmail.com\",\r\n  \"password\": \"starlab\"\r\n}",
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "http://127.0.0.1:8000/login",
+                      "protocol": "http",
+                      "host": [
+                        "127",
+                        "0",
+                        "0",
+                        "1"
+                      ],
+                      "port": "8000",
+                      "path": [
+                        "login"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": null,
+                  "header": [
+                    {
+                      "key": "date",
+                      "value": "Tue, 20 Jan 2026 17:01:31 GMT"
+                    },
+                    {
+                      "key": "server",
+                      "value": "uvicorn"
+                    },
+                    {
+                      "key": "content-length",
+                      "value": "180"
+                    },
+                    {
+                      "key": "content-type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n    \"tokenType\": \"bearer\",\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIwNjk2ZmI0NC1jYzU2LTdhMmItODAwMC02MTJlZjZhNzgwZTQifQ.IuI-qrxSxRq398T_4F_BAeVOIIIt3n5suclvK5gWvrs\"\n}"
+                }
+              ]
+            }
+          ],
+          "id": "d340dca5-6fa2-446f-97ad-f2629ae7546f"
+        },
+        {
+          "name": "Class",
+          "item": [
+            {
+              "name": "Create Class",
+              "id": "d490215e-d5b0-4274-a6a9-778a2d432e15",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "{{Test1JWTToken}}",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"name\": \"DJ Yoga Class\",\r\n  \"instructor\": \"Deban K\",\r\n  \"time\": \"2026-01-21T17:11:55.580Z\",\r\n  \"availableSlots\": 10\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://127.0.0.1:8000/classes",
+                  "protocol": "http",
+                  "host": [
+                    "127",
+                    "0",
+                    "0",
+                    "1"
+                  ],
+                  "port": "8000",
+                  "path": [
+                    "classes"
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "9fa033c5-3fef-41aa-af69-c042f7ffc0f6",
+                  "name": "Create Class (Successful)",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\r\n  \"name\": \"DJ Yoga Class\",\r\n  \"instructor\": \"Deban K\",\r\n  \"availableSlots\": 10\r\n}",
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "http://127.0.0.1:8000/classes",
+                      "protocol": "http",
+                      "host": [
+                        "127",
+                        "0",
+                        "0",
+                        "1"
+                      ],
+                      "port": "8000",
+                      "path": [
+                        "classes"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": null,
+                  "header": [
+                    {
+                      "key": "date",
+                      "value": "Tue, 20 Jan 2026 17:09:13 GMT"
+                    },
+                    {
+                      "key": "server",
+                      "value": "uvicorn"
+                    },
+                    {
+                      "key": "content-length",
+                      "value": "198"
+                    },
+                    {
+                      "key": "content-type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n    \"instructor\": \"Deban K\",\n    \"id\": \"0696fb6b-9f26-7169-8000-30ff32dfb951\",\n    \"name\": \"DJ Yoga Class\",\n    \"creatorId\": \"0696fb44-cc56-7a2b-8000-612ef6a780e4\",\n    \"time\": \"2026-01-20T22:39:13.944791\",\n    \"availableSlots\": 10\n}"
+                }
+              ]
+            },
+            {
+              "name": "Class List",
+              "id": "abbd142d-8403-454c-b638-7c159701f869",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "{{Test1JWTToken}}",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://127.0.0.1:8000/classes",
+                  "protocol": "http",
+                  "host": [
+                    "127",
+                    "0",
+                    "0",
+                    "1"
+                  ],
+                  "port": "8000",
+                  "path": [
+                    "classes"
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "2a692919-5d72-4fd5-9b95-e44bbbb37210",
+                  "name": "Class List (Succesful)",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "http://127.0.0.1:8000/classes",
+                      "protocol": "http",
+                      "host": [
+                        "127",
+                        "0",
+                        "0",
+                        "1"
+                      ],
+                      "port": "8000",
+                      "path": [
+                        "classes"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": null,
+                  "header": [
+                    {
+                      "key": "date",
+                      "value": "Tue, 20 Jan 2026 17:12:23 GMT"
+                    },
+                    {
+                      "key": "server",
+                      "value": "uvicorn"
+                    },
+                    {
+                      "key": "content-length",
+                      "value": "149"
+                    },
+                    {
+                      "key": "content-type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "[\n    {\n        \"id\": \"0696fb77-232e-7fa1-8000-b2cba4ecbb9c\",\n        \"name\": \"DJ Yoga Class\",\n        \"instructor\": \"Deban K\",\n        \"time\": \"2026-01-21T22:41:55.580000\",\n        \"availableSlots\": 10\n    }\n]"
+                }
+              ]
+            },
+            {
+              "name": "Class Book",
+              "id": "f964e55d-bf63-43a1-b4b9-0944ec09725d",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "{{Test1JWTToken}}",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"classId\": \"0696fb77-232e-7fa1-8000-b2cba4ecbb9c\",\r\n  \"clientName\": \"Virat Kholi\",\r\n  \"clientEmail\": \"king@gmail.com\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://127.0.0.1:8000/book",
+                  "protocol": "http",
+                  "host": [
+                    "127",
+                    "0",
+                    "0",
+                    "1"
+                  ],
+                  "port": "8000",
+                  "path": [
+                    "book"
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "c3f8e6b3-413e-4b45-b1dc-bb941c3ecf50",
+                  "name": "Class Book (Successful)",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\r\n  \"classId\": \"0696fb77-232e-7fa1-8000-b2cba4ecbb9c\",\r\n  \"clientName\": \"Virat Kholi\",\r\n  \"clientEmail\": \"king@gmail.com\"\r\n}",
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "http://127.0.0.1:8000/book",
+                      "protocol": "http",
+                      "host": [
+                        "127",
+                        "0",
+                        "0",
+                        "1"
+                      ],
+                      "port": "8000",
+                      "path": [
+                        "book"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": null,
+                  "header": [
+                    {
+                      "key": "date",
+                      "value": "Tue, 20 Jan 2026 17:17:21 GMT"
+                    },
+                    {
+                      "key": "server",
+                      "value": "uvicorn"
+                    },
+                    {
+                      "key": "content-length",
+                      "value": "152"
+                    },
+                    {
+                      "key": "content-type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n    \"clientName\": \"Virat Kholi\",\n    \"id\": \"0696fb8a-1db4-7bbc-8000-16b70b9d44f2\",\n    \"classId\": \"0696fb77-232e-7fa1-8000-b2cba4ecbb9c\",\n    \"clientEmail\": \"king@gmail.com\"\n}"
+                }
+              ]
+            },
+            {
+              "name": "Booking List",
+              "id": "01862598-4137-4b66-a47c-7db4f2c0a0b4",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "{{Test2JWTToken}}",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://127.0.0.1:8000/bookings",
+                  "protocol": "http",
+                  "host": [
+                    "127",
+                    "0",
+                    "0",
+                    "1"
+                  ],
+                  "port": "8000",
+                  "path": [
+                    "bookings"
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "0782d079-b7c3-4cd1-8b2e-bf3ec8ac6e61",
+                  "name": "Booking List (Successful)",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "http://127.0.0.1:8000/bookings",
+                      "protocol": "http",
+                      "host": [
+                        "127",
+                        "0",
+                        "0",
+                        "1"
+                      ],
+                      "port": "8000",
+                      "path": [
+                        "bookings"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": null,
+                  "header": [
+                    {
+                      "key": "date",
+                      "value": "Tue, 20 Jan 2026 17:20:48 GMT"
+                    },
+                    {
+                      "key": "server",
+                      "value": "uvicorn"
+                    },
+                    {
+                      "key": "content-length",
+                      "value": "154"
+                    },
+                    {
+                      "key": "content-type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "[\n    {\n        \"clientName\": \"Virat Kholi\",\n        \"id\": \"0696fb8a-1db4-7bbc-8000-16b70b9d44f2\",\n        \"classId\": \"0696fb77-232e-7fa1-8000-b2cba4ecbb9c\",\n        \"clientEmail\": \"king@gmail.com\"\n    }\n]"
+                }
+              ]
+            }
+          ],
+          "id": "ab794a14-a861-4b97-b906-d6a3ed0eaf69"
+        }
+      ],
+      "id": "6d30c7ef-48ff-43fb-9d44-dadfcb418cf7",
+      "auth": {
+        "type": "bearer",
+        "bearer": [
+          {
+            "key": "token",
+            "value": "",
+            "type": "string"
+          }
+        ]
+      },
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "id": "e99482dc-ead0-4507-b8a0-2e2527f4448a",
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {},
+            "exec": [
+              ""
+            ]
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "id": "d263f565-184f-482b-b463-191e628565a1",
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {},
+            "exec": [
+              ""
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "X-API-Key",
+        "type": "string"
+      },
+      {
+        "key": "value",
+        "value": "{{token}}",
+        "type": "string"
+      }
+    ]
+  },
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "id": "4655d0fd-c8f4-472b-8b5c-cea77100d8f3",
+        "type": "text/javascript",
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "id": "0b80ed7c-66cf-41f7-b9d4-d03603e313de",
+        "type": "text/javascript",
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "id": "dd87c0f5-c942-4680-a1bf-2b54409413b3",
+      "key": "Test1JWTToken",
+      "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIwNjk2ZmI0NC1jYzU2LTdhMmItODAwMC02MTJlZjZhNzgwZTQifQ.IuI-qrxSxRq398T_4F_BAeVOIIIt3n5suclvK5gWvrs"
+    },
+    {
+      "id": "ec5b9147-be9d-4fc1-88c1-7d0e84b651e7",
+      "key": "Test2JWTToken",
+      "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIwNjk2ZmI4OS1hMmVlLTc5ODktODAwMC1jNWJkOWYzZGIwNGYifQ.NRkNhxRsrwzeXKq16PLHl8C9iK5Ta6LoUj5qCrW46RI"
+    }
+  ]
+}
